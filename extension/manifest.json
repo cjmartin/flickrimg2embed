@@ -1,0 +1,17 @@
+{
+
+  "manifest_version": 2,
+
+  "name": "Flickr Image to Embed",
+  "description": "Replace Flickr img tags with Flickr web embeds.",
+  "version": ".01",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "exclude_matches": ["*://*.flickr.com/*"],
+      "js": ["fi2e.js"]
+    }
+  ]
+
+}
