@@ -49,9 +49,9 @@
 		embed.style.width = imgWidth+"px"; 
 		embed.style.height = setHeight+"px";
 
-		if (replaceNode.nodeName.toLowerCase() != 'a') {
-			embed.style.border = "5px solid #FF0000";
-		}
+		// if (replaceNode.nodeName.toLowerCase() != 'a') {
+		// 	embed.style.border = "5px solid #FF0000";
+		// }
 
 		replaceNode.parentNode.replaceChild(embed, replaceNode);
 	}
