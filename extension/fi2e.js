@@ -6,16 +6,7 @@
 
 (function() {
 	// Grab all Flickr hosted images on the page. (data-canonical-src entries are for sites that cache nicely)
-	var images = Array.prototype.slice.call(document.querySelectorAll("
-		img[src^='https://farm'][src*='flickr.com'][src$='.jpg'],
-		img[src^='http://farm'][src*='flickr.com'][src$='.jpg'],
-		img[src^='https://c'][src*='flickr.com'][src$='.jpg'],
-		img[src^='http://c'][src*='flickr.com'][src$='.jpg'],
-		img[data-canonical-src^='https://farm'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],
-		img[data-canonical-src^='http://farm'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],
-		img[data-canonical-src^='https://c'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],
-		img[data-canonical-src^='http://c'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg']"
-		));
+	var images = Array.prototype.slice.call(document.querySelectorAll("img[src^='https://farm'][src*='flickr.com'][src$='.jpg'],img[src^='http://farm'][src*='flickr.com'][src$='.jpg'],img[src^='https://c'][src*='flickr.com'][src$='.jpg'],img[src^='http://c'][src*='flickr.com'][src$='.jpg'],img[data-canonical-src^='https://farm'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],img[data-canonical-src^='http://farm'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],img[data-canonical-src^='https://c'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg'],img[data-canonical-src^='http://c'][data-canonical-src*='flickr.com'][data-canonical-src$='.jpg']"));
 
 	var photoRe = /(flickr.com|flic.kr)\/(photos|p)\/([0-9a-zA-Z-_]+|[0-9]+@N[0-9]+)\/([0-9]+)\/?(in)?\/?([^\/]+)?/;
 	var photoIdRe = /(\d+)_([a-zA-Z0-9]+)_?[a-z]?.jpg$/;
