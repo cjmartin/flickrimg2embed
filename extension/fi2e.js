@@ -60,7 +60,7 @@
 	function analyzeImg(image) {
 		var photoInfo = null;
 		var metaTags = null;
-		var PhotoPageUrl = null;
+		var photoPageUrl = null;
 		var embedSrc = null;
 		var replaceNode = null;
 
