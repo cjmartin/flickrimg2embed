@@ -25,7 +25,7 @@ The extension itself is just a js file that finds Flickr images and builds a Web
 3. Drag the crx file you just downloaded into the Chrome extensions window.
 4. Reload this page, the image below will be updated to a Flickr Web Embed.
 5. Browse normally, maybe starting with [Smitten Kitchen](http://smittenkitchen.com). If you see broken or buggy Web Embeds, please open an issue here and I'll route it to the right place.
-6. Smart JS type? Clone this and improve [fi2e.js](https://github.com/cjmartin/flickrimg2embed/blob/master/extension/fi2e.js), and make a pull request. When I build new crx files, installed extensions will auto-update.
+6. Smart javascript type? Clone this and improve [fi2e.js](https://github.com/cjmartin/flickrimg2embed/blob/master/extension/fi2e.js), and make a pull request. When I build new crx files installed extensions will auto-update.
 
 This image should be a Web Embed if you have the extension installed:
 
