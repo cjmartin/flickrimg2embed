@@ -4,7 +4,7 @@
 
   "name": "Flickr Image to Embed",
   "description": "Replace Flickr img tags with Flickr web embeds.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "update_url": "https://github.com/cjmartin/flickrimg2embed/raw/master/crx/updates.xml",
 
   "content_scripts": [
