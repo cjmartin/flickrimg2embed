@@ -23,3 +23,4 @@
 })(window, document, 'FlickrEmbedr', 'script', 'https://widgets.flickr.com/embedr/embedr-loader.js');
 
 window['FlickrEmbedr'].process('all');
+console.log(window['FlickrEmbedr'].q);
