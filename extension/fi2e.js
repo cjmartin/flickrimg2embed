@@ -1,15 +1,25 @@
-// Flickr img to embed.
-//
-// This grabs all of the Flickr images in the page, builds an iframe embed,
-// and replaces the original image with a Flickr Web Embed.
-//
 
-function runCode(){
-	!function(a,b,c,d,e){a[c]=a[c]||{process:function(b){(a[c].q=a[c].q||[]).push(b)}};var f=b.createElement(d),g=b.getElementsByTagName(d)[0];f.async=1,f.src=e,g.parentNode.insertBefore(f,g)}(window,document,"FlickrEmbedr","script","https://www.flickr.com/services/js/embedr.js"),window.FlickrEmbedr.process("all");
-}
+(function(win, doc, fe, script, url){
+	// If win[fe] exists, we'va already done this work, so do nothing.
+	if (!win[fe]) {
+		//if the embed code doesn't exist on the page already
+		//we create a queue
+		win[fe] = {
+			process: function(type){
+				//push any process calls into the queue
+				(win[fe].q=win[fe].q||[]).push(type);
+			}
+		};
+		//create a script element for the
+		//loader script
+		var s = doc.createElement(script),
+			target =doc.getElementsByTagName(script)[0];
 
-(function() {
-	var s = document.createElement('script');
-	s.text = '(' + runCode.toString() + ')();';
-	document.body.appendChild(s);
-})();
+		s.async=1;
+		s.src=url;
+		//add the script to the DOM so that it loads
+		target.parentNode.insertBefore(s,target);
+	}
+})(window, document, 'FlickrEmbedr', 'script', 'https://widgets.flickr.com/embedr/embedr-loader.js');
+
+window['FlickrEmbedr'].process('all');
