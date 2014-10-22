@@ -1,25 +1,18 @@
 
 (function(win, doc, fe, script, url){
-	// If win[fe] exists, we'va already done this work, so do nothing.
-	if (!win[fe]) {
-		//if the embed code doesn't exist on the page already
-		//we create a queue
-		win[fe] = {
-			process: function(type){
-				//push any process calls into the queue
-				(win[fe].q=win[fe].q||[]).push(type);
-			}
-		};
-		//create a script element for the
-		//loader script
-		var s = doc.createElement(script),
-			target =doc.getElementsByTagName(script)[0];
+	//create a script element for the
+	//loader script
+	var s = doc.createElement(script),
+		target =doc.getElementsByTagName(script)[0];
 
-		s.async=1;
-		s.src=url;
-		//add the script to the DOM so that it loads
-		target.parentNode.insertBefore(s,target);
-	}
+	s.async=1;
+	s.src=url;
+	//add the script to the DOM so that it loads
+	target.parentNode.insertBefore(s,target);
+
+
+	setTimeout(function(){
+		window.FlickrEmbedr = new FlickrEmbedr();
+		window['FlickrEmbedr'].process('all');
+	}, 500);
 })(window, document, 'FlickrEmbedr', 'script', 'https://widgets.flickr.com/embedr/embedr-loader.js');
-
-window['FlickrEmbedr'].process('all');
