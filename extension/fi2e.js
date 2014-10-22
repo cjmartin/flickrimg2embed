@@ -9,10 +9,9 @@
 	s.src=url;
 	//add the script to the DOM so that it loads
 	target.parentNode.insertBefore(s,target);
-
-
-	setTimeout(function(){
-		window.FlickrEmbedr = new FlickrEmbedr();
-		window['FlickrEmbedr'].process('all');
-	}, 500);
 })(window, document, 'FlickrEmbedr', 'script', 'https://widgets.flickr.com/embedr/embedr-loader.js');
+
+window.onload = function() {
+	window.FlickrEmbedr = new FlickrEmbedr();
+	window['FlickrEmbedr'].process('all');
+};
