@@ -26,3 +26,7 @@ The extension itself is just a js file that finds Flickr images and builds a Web
 4. Reload this page, the image below will be updated to a Flickr Web Embed.
 5. Browse normally, maybe starting with [Smitten Kitchen](http://smittenkitchen.com). If you see broken or buggy Web Embeds, please open an issue here and I'll route it to the right place.
 6. Smart javascript type? Clone this and improve [fi2e.js](https://github.com/cjmartin/flickrimg2embed/blob/master/extension/fi2e.js), and make a pull request. When I build new crx files installed extensions will auto-update.
+
+If you have the extension running, this should be an embed.
+
+<a href="https://www.flickr.com/photos/cjmartin/12180477056" title="Deploy the DRONES! by Chris Martin, on Flickr"><img src="https://farm4.staticflickr.com/3829/12180477056_69ba0b0bc1_z.jpg" width="640" height="480" alt="Deploy the DRONES!"></a>
